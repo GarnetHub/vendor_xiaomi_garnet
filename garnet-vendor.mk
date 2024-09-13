@@ -490,6 +490,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/garnet/proprietary/vendor/etc/displayconfig/display_id_4630946370515662721.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946370515662721.xml \
     vendor/xiaomi/garnet/proprietary/vendor/etc/displayconfig/display_id_4630946377747519617.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946377747519617.xml \
     vendor/xiaomi/garnet/proprietary/vendor/etc/displayconfig/display_id_4630946545580055169.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946545580055169.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dolby_vision.cfg \
     vendor/xiaomi/garnet/proprietary/vendor/etc/dpm_vndr/vendor.dpm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/dpm_vndr/vendor.dpm.conf \
     vendor/xiaomi/garnet/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
     vendor/xiaomi/garnet/proprietary/vendor/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
@@ -540,6 +541,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/garnet/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/xiaomi/garnet/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/xiaomi/garnet/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/init/vendor.dolbyvision.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolbyvision.media.c2@1.0-service.rc \
     vendor/xiaomi/garnet/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
     vendor/xiaomi/garnet/proprietary/vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc \
     vendor/xiaomi/garnet/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
@@ -1028,6 +1030,14 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspmhal@1.0 \
     android.hardware.secure_element@1.0-impl \
     btaudio_offload_if \
+    c2.dolby.avc.dec \
+    c2.dolby.avc.sec.dec \
+    c2.dolby.client \
+    c2.dolby.egl \
+    c2.dolby.hevc.dec \
+    c2.dolby.hevc.enc \
+    c2.dolby.hevc.sec.dec \
+    c2.dolby.store \
     com.qti.actuator.garnet_aac_ov64b40_dw9800v_wide_i_actuator \
     com.qti.actuator.garnet_ofilm_s5khp3_gt9764ber_wide_ii_actuator \
     com.qti.actuator.garnet_sunny_s5khp3_gt9764ber_wide_i_actuator \
@@ -1420,6 +1430,8 @@ PRODUCT_PACKAGES += \
     libdisplayqos \
     libdisplayskuutils \
     libdlrmsc \
+    libdolbyottcameracontrol \
+    libdolbyvision \
     libdpmqmihal \
     libdpps \
     libdrmfs \
@@ -2119,6 +2131,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service-qti \
     android.hardware.keymaster@4.1-service-qti \
     android.hardware.security.keymint-service-qti \
+    dolbycodec2 \
     qcrilNrd \
     vendor.display.color@1.0-service \
     vendor.nxp.hardware.nfc@2.0-service \
